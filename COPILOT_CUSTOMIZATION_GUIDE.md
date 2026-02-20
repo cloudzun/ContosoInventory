@@ -1,3 +1,36 @@
+# GitHub Copilot 自定义实验指南
+
+## 实验简介
+
+**用 GitHub Copilot 的自定义功能构建一个符合企业编码标准的 ASP.NET Core Web API 功能**
+
+### 目的
+
+学会如何通过自定义指令、路径指令、提示文件和自定义 Agent，让 GitHub Copilot 自动遵循项目的编码规范，并用多 Agent 协作完成从规划、实现到代码审查的完整开发流程。
+
+### 做什么
+
+1. **创建自定义指令文件**（`copilot-instructions.md`）— 让 Copilot 自动遵守命名、架构、错误处理等编码标准
+2. **创建路径指令**（Controllers、Services 分别的 `.instructions.md`）— 针对不同代码层提供专项规范
+3. **创建可复用提示**（`.prompt.md`）— 封装常用任务（如生成 API 文档）为斜杠命令
+4. **定义三个自定义 Agent**：
+   - **Planner**（只读工具）— 分析需求，生成实现计划
+   - **Implementer**（编辑工具）— 按计划写代码
+   - **Reviewer**（只读工具）— 检查代码质量、安全和规范
+5. **通过 Handoffs 串联 Agent** — 让 Planner → Implementer → Reviewer 形成自动化工作流
+
+### 得到什么
+
+- 一套能强制 Copilot 遵循项目规范的**自定义指令体系**
+- 一个**多 Agent 协作的开发流水线**（Planning → Implementation → Review）
+- 在 ContosoInventory 项目中添加一个完整的 **Product Inventory 管理功能**（包括模型、DTO、服务、控制器、EF 迁移等），全程由 Copilot 按企业标准生成
+
+### 实际意义
+
+**把 Copilot 从"通用助手"变成"懂你项目规范的团队成员"**，确保 AI 生成的代码从一开始就符合团队标准，不需要大量人工返工。
+
+---
+
 ## 🎯 核心操作流程（去除所有说明）
 
 ### 📦 1. 准备项目
